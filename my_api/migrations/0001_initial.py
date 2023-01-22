@@ -30,6 +30,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='book',
             name='category',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='todo_list.Category'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='my_api.Category'),
         ),
     ]

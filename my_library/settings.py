@@ -25,7 +25,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'todo_list',
+    'my_api',
     'rest_framework',
 ]
 
@@ -44,7 +44,7 @@ ROOT_URLCONF = 'my_library.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['todo_list/templates/'],
+        'DIRS': ['my_api/templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
