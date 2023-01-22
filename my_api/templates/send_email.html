@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Send Email</title>
+    </head>
+    <body>
+        <h2>2.2 สร้างระบบช่วยส่งอีเมลล์ตอบกลับ ด้วยDjango framework  มีใช้หน้า server side หรือ api ก็ได้โดยในการส่งให้ระบุอีเมลล์ผู้รับ ชื่อ เนื้อความ (ตัวอย่างอีเมลล์ตามไฟล์แนบครับ)</h2>
+        <form method="post" action="/send_email/">{% csrf_token %}
+            <table>
+                    <tr>
+                        <td>to_email : </td>
+                        <td><input type="text" name="to_email"/></td>
+                    </tr>
+                    <tr>
+                        <td>subject : </td>
+                        <td><input type="text" name="subject"/></td>
+                    </tr>
+                    <tr>
+                        <td>message : </td>
+                        <td><input type="text" name="message"/></td>
+                    </tr>
+                    <tr></tr>
+
+                    <tr>
+                        <td><button onclick="returnText()">Submit Send Email</button></td>
+                    </tr>
+            </table>
+
+        </form>
+    </body>
+</html>

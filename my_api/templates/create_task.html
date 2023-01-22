@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Create Todo List</title>
+    </head>
+    <body>
+        <h2>Add Todo List</h2>
+        <form method="post" action="/add_todo_list/">{% csrf_token %}
+            <table>
+                <tr>
+                    <td>TASK : </td>
+                    <td><input type="text" name="task"/></td>
+                </tr>
+                <tr><tr><tr></tr>
+                <tr>
+                    <td></td><td><button onclick="returnText()">ADD TODO LIST</button></td>
+                </tr>
+            </table>
+
+        </form>
+    </body>
+</html>
+
+
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Todo List</title>
+    </head>
+    <body>
+        <h2>2.1 ให้ทำ todo list โดยใช้ django framework มีใช้หน้า server side หรือapi ก็ได้</h2>
+        <table>
+            <ul>
+                <tr>
+                    <th>Task</th>
+                    <th></th>
+                    <th>Status</th>
+                </tr>
+                {% for todo in todos %}
+                    <tr>
+                        <th>{{todo.task}}</th>
+                        <th></th>
+                        <td>{{todo.completed}}</td>
+                        <th></th>
+                        <form method="post" action="/complete/?todo_id={{todo.id}}">{% csrf_token %}
+                            <td><button type="submit" >Edit</button></td>
+                        </form>
+                        <th></th>
+                        <form method="post" action="/delete/?todo_id={{todo.id}}">{% csrf_token %}
+                            <td><button type="submit">Delete</button></td>
+                        </form>
+                    </tr>    
+                {% endfor %}
+            </ul>
+            <tr><tr></tr>
+            <tr>
+                <form method="post" action="/create_todo_list/">{% csrf_token %}
+                    <td></td><td><button onclick="returnText()">Add Task</button></td>
+                </form>
+            </tr>
+        </table>
+
+       
+    </body>
+</html>
+
+
+
+
